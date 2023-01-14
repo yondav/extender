@@ -8,9 +8,9 @@
  */
 
 export default function toTitlecase(this: string): string {
-  return this.trim()
-    .toLowerCase()
+  return this.toLowerCase()
     .split(/[^a-z|A-Z|0-9]+/)
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .join(' ')
+    .trim();
 }
